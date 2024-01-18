@@ -16,7 +16,7 @@
         <div class="formcontent">
             <form id="formulario_login" runat="server">
                 <div class="form-control">
-                    <div class="col-md-6 text-center mb-5">
+                    <div class="row">
                         <asp:Label class="h2" ID="lblBienvenida" runat="server" Text="Bienvenido/a al Sistema"></asp:Label>
                     </div>
                     <div>
@@ -25,11 +25,15 @@
                     </div>
                     <div>
                         <asp:Label ID="lblPassword" runat="server" Text="Password:"></asp:Label>
-                        <asp:TextBox ID="tbPassword" CssClass="form-control" runat="server" placecholder="Password"></asp:TextBox>
+                        <asp:TextBox ID="tbPassword" CssClass="form-control" TextMode="Password" runat="server" placecholder="Password"></asp:TextBox>
                     </div>
                     <hr/>
                     <div class="row">
-                        <asp:Button ID="btnIngresar" CssClass="btn btn-primary btn-dark" runat="server" Text="Ingresar" />
+                        <asp:Label ID="lblError" CssClass="alert-danger" runat="server"></asp:Label>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <asp:Button ID="btnIngresar" CssClass="btn btn-primary btn-dark" runat="server" Text="Ingresar" OnClick="btnIngresar_Click"/>
                     </div>
                 </div>
             </form>
